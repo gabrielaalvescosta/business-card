@@ -1,17 +1,16 @@
 <template>
-  <Portuguese />
-  <English />
+  <div class="container">
+  <Card/>
+  </div>
 </template>
 
 <script>
-import English from './components/English.vue'
-import Portuguese from './components/Portuguese.vue'
+import Card from './components/Card';
 
 export default {
   name: 'App',
   components: {
-    English,
-    Portuguese
+    Card,
   }
 }
 </script>
@@ -21,11 +20,10 @@ export default {
 
 #app {
   font-family: Orkney, sans-serif;
-  font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #303030;
   margin-top: 60px;
 }
 </style>

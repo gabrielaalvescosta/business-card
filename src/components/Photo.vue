@@ -1,10 +1,10 @@
 <template>
-  Hello English
+ FOTO AQUI
 </template>
 
 <script>
 export default {
-
+    name: "Photo"
 }
 </script>
 
