@@ -14,7 +14,7 @@ export default {
         .body__profile__icons {
             font-size: 3.5em;
             letter-spacing: 0.25em;
-            top: -30px;
+            top: -60px;
             color: #737373;
             position: relative;
         }

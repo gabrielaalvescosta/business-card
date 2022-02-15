@@ -20,12 +20,12 @@ export default {
 
 <style>
       .body__profile__title {
-        top: -50px;
+        top: -70px;
         position: relative;
       }
 
       .body__profile__title h1 {
-        font-size: 1.8em;
+        font-size: 1.5em;
         font-weight: 900;
         text-align: center;
         color: rgb(84, 84, 84);

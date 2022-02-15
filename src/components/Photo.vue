@@ -16,7 +16,7 @@ export default {
         width: 200px;
         height: 200px;
         border: 15px solid #fff;
-        top: -90px;
+        top: -100px;
         position: relative;
         box-shadow: 1px 2px 18px 4px rgb(226, 226, 226);
     }
