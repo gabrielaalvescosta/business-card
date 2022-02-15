@@ -1,5 +1,5 @@
 <template>
-          <div class="body__profile__title">
+          <div v-if="portugues" class="body__profile__title">
           <h1>Gabriela Costa</h1>
           <h2>UI/UX designer</h2>
           <h2>Front-end Web Developer</h2>
@@ -10,11 +10,23 @@
             e TypeScript.
           </div>
           </div>
+         <div v-else class="body__profile__title">
+          <h1>Gabriela Costa</h1>
+          <h2>UI/UX designer</h2>
+          <h2>Front-end Web Developer</h2>
+          <div class="body__profile__bio">Front-end web developer who works with HTML, CSS, Javascript, ReactJS, Vue.js and learning a little bit about Java and TypeScript.
+          </div>
+          </div>
 </template>
 
 <script>
 export default {
-    name: "Bio"
+    name: "Bio",
+    data() {
+      return {
+        portugues: false
+      }
+    }
 }
 </script>
 

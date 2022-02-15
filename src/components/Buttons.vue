@@ -1,16 +1,36 @@
 <template>
-        <div class="body__profile__button-area">
+        <div v-if="portugues" class="body__profile__button-area">
                 <button class="body__profile__button github"><a href="https://www.github.com/gabrielaalvescosta">Ver portfólio no GitHub</a></button>
-                <button class="body__profile__button cv">Baixar Currículo em PDF</button>
+                <button class="body__profile__button cv"><a bind:href="curriculo">Baixar Currículo em PDF</a></button>
+        </div>
+        <div v-else class="body__profile__button-area">
+                <button class="body__profile__button github"><a href="https://www.github.com/gabrielaalvescosta">View portfolio on GitHub</a></button>
+                <button class="body__profile__button cv"><a bind:href="resume">Download Resume in PDF </a></button>
         </div>
         <div class="body__profile__translate">
-                <button><fa icon="flag" /> Translate</button>
+                <button @click="translate" v-if="portugues"><fa icon="flag" /> Translate {{ en }}</button>
+                <button @click="translate" v-else><fa icon="flag" /> Traduzir {{ pt }}</button>
         </div>
 </template>
 
 <script>
 export default {
-    name: "Buttons"
+    name: "Buttons",
+    data() {
+      return {
+        portugues: false,
+        resume: "https://github.com/gabrielaalvescosta/gabrielaalvescosta/raw/main/resumes/gabriela-costa-software-engineer-en.pdf",
+        curriculo: "https://github.com/gabrielaalvescosta/gabrielaalvescosta/raw/main/resumes/gabriela-costa-software-engineer-pt-br.pdf",
+        pt: "(PT-BR)",
+        en: "(EN)"
+      }
+    },
+    methods: {
+      translate() {
+        this.portugues = !this.portugues
+        console.log("PORRA")
+      }
+    }
 }
 </script>
 
@@ -68,7 +88,11 @@ export default {
       top: -10px;
       cursor: pointer;
       position: relative;
+      transition: all 0.5s;
     }
-
+    
+    .body__profile__translate button:hover {
+      color: #ddd;
+    }
 
 </style>
