@@ -48,7 +48,7 @@ export default {
         curriculo: "https://github.com/gabrielaalvescosta/gabrielaalvescosta/raw/main/resumes/gabriela-costa-software-engineer-pt-br.pdf",
         ptFLag: "(PT-BR)",
         enFlag: "(EN)",
-        show: false
+        show: false,
       }
     },
     methods: {
@@ -77,16 +77,17 @@ export default {
 </script>
 
 <style>
-    .img-anim-enter-active, .img-anim-leave-active {
-      transition: transform 0.5s ease, opacity 0.5s ease;
+        .fade-enter-active,
+    .fade-leave-active {
+      transition: opacity 1s
     }
-    .img-anim-enter, .img-anim-leave-to {
-      transform: translateX(-100px) rotateZ(90deg);
-      opacity: 0;
-    }
-    .anim-img-enter-to, .anim-img-leave {
-      transform: translateX(0px) rotateZ(0deg);
-      opacity: 1;
+
+    .fade-enter,
+    .fade-leave-to
+    /* .fade-leave-active in <2.1.8 */
+
+    {
+      opacity: 0
     }
 
     .body__profile__button-area {
