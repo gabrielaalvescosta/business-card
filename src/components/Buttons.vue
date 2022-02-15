@@ -1,41 +1,94 @@
 <template>
-        <div v-if="portugues" class="body__profile__button-area">
+<div id="demo">
+        <div v-if="portugues" class="body__profile__button-area" id="pt-br">
+          <transition name="fade" v-on:enter="enter">
+                <Portuguese />
+                 </transition>
+                <Social />
                 <button class="body__profile__button github"><a href="https://www.github.com/gabrielaalvescosta">Ver portfólio no GitHub</a></button>
                 <button class="body__profile__button cv"><a v-bind:href="curriculo">Baixar Currículo em PDF</a></button>
+         
         </div>
+        
         <div v-else class="body__profile__button-area">
-                <button class="body__profile__button github"><a href="https://www.github.com/gabrielaalvescosta">View portfolio on GitHub</a></button>
-                <button class="body__profile__button cv"><a v-bind:href="resume">Download Resume in PDF </a></button>
+          <transition name="fade" v-on:enter="enter">
+                <English/>
+                </transition>
+                <Social />
+                <button class="body__profile__button github botao"><a href="https://www.github.com/gabrielaalvescosta">View portfolio on GitHub</a></button>
+                <button class="body__profile__button cv botao"><a v-bind:href="resume">Download Resume in PDF </a></button>
+               
         </div>
         <div class="body__profile__translate">
-                <button @click="translate" v-if="portugues"><fa icon="flag" /> Translate {{ en }}</button>
-                <button @click="translate" v-else><fa icon="flag" /> Traduzir {{ pt }}</button>
+                <button @click="translate" v-if="trans" v-on:click="fadeMe"><fa icon="flag" /> Translate {{ enFlag }}</button>
+                <button @click="translate" v-else v-on:click="fadeMe"><fa icon="flag" /> Traduzir (PT) </button>
+        </div>
         </div>
 </template>
 
 <script>
+import Portuguese from './Portuguese';
+import English from './English';
+import Social from './Social';
+
 export default {
+    
     name: "Buttons",
+    el: '#demo',
+    components: {
+      Portuguese,
+      English,
+      Social,
+    },
     data() {
       return {
-        portugues: false,
+        trans: Boolean(true),
+        portugues: Boolean,
         resume: "https://github.com/gabrielaalvescosta/gabrielaalvescosta/raw/main/resumes/gabriela-costa-software-engineer-en.pdf",
         curriculo: "https://github.com/gabrielaalvescosta/gabrielaalvescosta/raw/main/resumes/gabriela-costa-software-engineer-pt-br.pdf",
-        pt: "(PT-BR)",
-        en: "(EN)"
+        ptFLag: "(PT-BR)",
+        enFlag: "(EN)",
+        show: false
       }
     },
     methods: {
       translate() {
-        this.portugues = !this.portugues
-        console.log("clicado")
+        this.portugues = !this.portugues;
+        this.trans = !this.trans
+        console.log("clicado aqui")
+      
+      },
+
+      fadeMe: function() {
+          this.show = !this.show;
+      },
+
+      enter: function() {
+          var that = this;
+          
+          setTimeout(function() {
+            that.show = false;
+          }, 3000); // hide the message after 3 seconds
       }
-    }
+    },
+    
+    
 }
 </script>
 
 <style>
-    
+    .img-anim-enter-active, .img-anim-leave-active {
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+    .img-anim-enter, .img-anim-leave-to {
+      transform: translateX(-100px) rotateZ(90deg);
+      opacity: 0;
+    }
+    .anim-img-enter-to, .anim-img-leave {
+      transform: translateX(0px) rotateZ(0deg);
+      opacity: 1;
+    }
+
     .body__profile__button-area {
       top: -40px;
       position: relative;

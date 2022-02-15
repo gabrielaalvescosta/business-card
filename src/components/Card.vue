@@ -2,26 +2,26 @@
   <div class="body__container">  
   <div class="body__profile">
     <Photo/>
-    <Bio/>
-    <Social/>
     <Buttons/>
   </div>
   </div>
 </template>
 
 <script>
-import Social from './Social';
+
 import Photo from './Photo';
-import Bio from './Bio';
 import Buttons from './Buttons';
 
 export default {
   name: 'Card',
   components: {
     Photo,
-    Social,
     Buttons,
-    Bio
+  },
+  methods: {
+    translateBio() {
+      console.log("muda bio")
+    }
   }
 }
 </script>
@@ -29,7 +29,7 @@ export default {
 <style>
 
     .body__container { 
-      
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;

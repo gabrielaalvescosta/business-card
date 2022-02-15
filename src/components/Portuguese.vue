@@ -1,38 +1,35 @@
 <template>
-          <div v-if="portugues" class="body__profile__title">
+    
+          <div class="body__profile__title">
           <h1>Gabriela Costa</h1>
           <h2>UI/UX designer</h2>
           <h2>Front-end Web Developer</h2>
-          <div class="body__profile__bio">Desenvolvedora front-end com
-            conhecimentos em HTML, CSS e
-            JavaScript, ReactJs e Vue.js. 
-            Atualmente aprendendo Java
-            e TypeScript.
+          <div class="body__profile__bio-pt">
+          {{ bioPt }}
           </div>
           </div>
-         <div v-else class="body__profile__title">
-          <h1>Gabriela Costa</h1>
-          <h2>UI/UX designer</h2>
-          <h2>Front-end Web Developer</h2>
-          <div class="body__profile__bio">Front-end web developer who works with HTML, CSS, Javascript, ReactJS, Vue.js and learning a little bit about Java and TypeScript.
-          </div>
-          </div>
+       
 </template>
 
 <script>
 export default {
-    name: "Bio",
-    data() {
-      return {
-        portugues: false
-      }
-    }
+    name: "Portuguese",
+    data: () => ({
+    
+        bioPt: `Desenvolvedora front-end com
+            conhecimentos em HTML, CSS e
+            JavaScript, ReactJs e Vue.js. 
+            Atualmente aprendendo Java
+            e TypeScript.`,
+
+    }),
+    
 }
 </script>
 
 <style>
       .body__profile__title {
-        top: -70px;
+        top: -20px;
         position: relative;
       }
 
@@ -54,7 +51,7 @@ export default {
 
       }
 
-      .body__profile__bio {
+      .body__profile__bio-pt {
         font-size: 0.75em;
         color: rgb(171, 171, 171);
         font-weight: 900;
@@ -64,6 +61,11 @@ export default {
         padding: 1.25em 0;
         border-top: 4px solid whitesmoke;
         border-bottom: 4px solid whitesmoke;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .body__profile__bio-pt:hover{
+        transition: all 0.5s ease-in-out;
       }
 </style>
 
