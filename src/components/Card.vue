@@ -1,9 +1,11 @@
 <template>
+  <div class="body__container">  
   <div class="body__profile">
     <Photo/>
     <Bio/>
     <Social/>
     <Buttons/>
+  </div>
   </div>
 </template>
 
@@ -25,12 +27,20 @@ export default {
 </script>
 
 <style>
+
+    .body__container { 
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .body__profile {
         background: white;
         border-radius: 50px;
-        padding: 2em;
+        padding: 1.5em 1.75em;
         margin: 2em auto;
-        max-width: 375px;
+        max-width: 330px;
         box-shadow: 0px 3px 136px 0px rgba(88, 87, 119, 0.21);
     }
 </style>

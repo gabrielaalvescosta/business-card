@@ -1,6 +1,6 @@
 <template>
       <div class="body__profile__icons">
-      <fa :icon="['fab', 'linkedin']" /> <fa :icon="['fab', 'whatsapp']" />  <fa :icon="email" /> 
+      <fa :icon="['fab', 'linkedin']" /> <fa :icon="['fab', 'whatsapp']" />  <fa :icon="['fab', 'google']" /> 
       </div>
 </template>
 
@@ -12,6 +12,10 @@ export default {
 
 <style>
         .body__profile__icons {
-            font-size: 3em;
+            font-size: 3.5em;
+            letter-spacing: 0.25em;
+            top: -30px;
+            color: #737373;
+            position: relative;
         }
 </style>

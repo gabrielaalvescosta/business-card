@@ -13,8 +13,8 @@ export default {
 <style>
     .body__profile__photo img {
         border-radius: 50%;
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         border: 15px solid #fff;
         top: -90px;
         position: relative;

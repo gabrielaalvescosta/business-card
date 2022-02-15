@@ -25,7 +25,7 @@ export default {
       }
 
       .body__profile__title h1 {
-        font-size: 2em;
+        font-size: 1.8em;
         font-weight: 900;
         text-align: center;
         color: rgb(84, 84, 84);
@@ -33,7 +33,7 @@ export default {
       }
 
       .body__profile__title h2 {
-        font-size: 0.9em;
+        font-size: 0.75em;
         color: rgb(153, 153, 153);
         line-height: 1.391;
         font-weight: lighter;
@@ -43,7 +43,7 @@ export default {
       }
 
       .body__profile__bio {
-        font-size: 0.9em;
+        font-size: 0.75em;
         color: rgb(171, 171, 171);
         font-weight: 900;
         line-height: 1.404;
