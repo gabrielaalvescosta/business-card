@@ -27,10 +27,10 @@ export default {
 <style>
     .body__profile {
         background: white;
-        border-radius: 20px;
+        border-radius: 50px;
         padding: 2em;
-        min-width: 375px;
-        margin: 0 auto;
-        max-width: 420px;
+        margin: 2em auto;
+        max-width: 375px;
+        box-shadow: 0px 3px 136px 0px rgba(88, 87, 119, 0.21);
     }
 </style>

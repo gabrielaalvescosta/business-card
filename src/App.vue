@@ -20,6 +20,7 @@ export default {
 
 #app {
   font-family: Orkney, sans-serif;
+  font-size: 1.2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
