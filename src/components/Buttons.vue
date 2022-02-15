@@ -1,11 +1,11 @@
 <template>
         <div v-if="portugues" class="body__profile__button-area">
                 <button class="body__profile__button github"><a href="https://www.github.com/gabrielaalvescosta">Ver portfólio no GitHub</a></button>
-                <button class="body__profile__button cv"><a bind:href="curriculo">Baixar Currículo em PDF</a></button>
+                <button class="body__profile__button cv"><a v-bind:href="curriculo">Baixar Currículo em PDF</a></button>
         </div>
         <div v-else class="body__profile__button-area">
                 <button class="body__profile__button github"><a href="https://www.github.com/gabrielaalvescosta">View portfolio on GitHub</a></button>
-                <button class="body__profile__button cv"><a bind:href="resume">Download Resume in PDF </a></button>
+                <button class="body__profile__button cv"><a v-bind:href="resume">Download Resume in PDF </a></button>
         </div>
         <div class="body__profile__translate">
                 <button @click="translate" v-if="portugues"><fa icon="flag" /> Translate {{ en }}</button>
@@ -28,7 +28,7 @@ export default {
     methods: {
       translate() {
         this.portugues = !this.portugues
-        console.log("PORRA")
+        console.log("clicado")
       }
     }
 }
@@ -91,8 +91,5 @@ export default {
       transition: all 0.5s;
     }
     
-    .body__profile__translate button:hover {
-      color: #ddd;
-    }
 
 </style>
