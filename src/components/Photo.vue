@@ -1,6 +1,6 @@
 <template>
     <div class="body__profile__photo">
-    <img :src="require('../assets/daniel.jpg')" alt="Daniel - the author" />   
+    <img :src="require('../assets/daniel_cropped2.jpg')" alt="Daniel - the author" />   
     </div>
 </template>
 
