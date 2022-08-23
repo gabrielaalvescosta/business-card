@@ -62,9 +62,6 @@ input{
 /* GLOBAL CSS */
 
 body {
-    background: rgb(185,169,255);
-    background: -moz-linear-gradient(90deg, rgba(185,169,255,1) 0%, rgba(220,169,255,1) 81%, rgba(220,169,255,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(185,169,255,1) 0%, rgba(220,169,255,1) 81%, rgba(220,169,255,1) 100%);
-    background: linear-gradient(90deg, rgba(185,169,255,1) 0%, rgba(220,169,255,1) 81%, rgba(220,169,255,1) 100%);
+    background: #cdd6dd;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b9a9ff",endColorstr="#dca9ff",GradientType=1);
 }

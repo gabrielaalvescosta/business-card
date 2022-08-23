@@ -36,11 +36,10 @@ export default {
     }
 
     .body__profile {
-        background: white;
-        border-radius: 50px;
+        background: #666;
+        border-radius: 6px;
         padding: 1.5em 1.75em;
         margin: 2em auto;
         max-width: 330px;
-        box-shadow: 0px 3px 136px 0px rgba(88, 87, 119, 0.21);
     }
 </style>

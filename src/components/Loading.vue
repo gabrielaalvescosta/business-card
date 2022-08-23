@@ -20,7 +20,7 @@ export default {
 .background {
   width: 100%;
   height: 100%;
-  background: rgba(207, 171, 255, 0.98);
+  background: rgba(202, 196, 206, 0.98);
   top: 0px;
   position: fixed;
   z-index: 10;

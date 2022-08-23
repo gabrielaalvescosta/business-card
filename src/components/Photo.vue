@@ -1,6 +1,6 @@
 <template>
     <div class="body__profile__photo">
-    <img src="../assets/perfil.jpg" alt="Perfil" />   
+    <img :src="require('../assets/daniel.jpg')" alt="Perfil" />   
     </div>
 </template>
 
@@ -12,13 +12,13 @@ export default {
 
 <style>
     .body__profile__photo img {
-        border-radius: 50%;
+        border-radius: 25%;
         width: 200px;
         height: 200px;
-        border: 15px solid #fff;
+        border: 15px solid #ffcc33 ;
         top: -100px;
         position: relative;
-        box-shadow: 1px 2px 18px 4px rgb(226, 226, 226);
+        
     }
 </style>
 

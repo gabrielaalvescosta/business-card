@@ -1,7 +1,7 @@
 <template>
       <div class="body__profile__icons">
-      <a href="https://www.linkedin.com/in/gabrielaalvescosta"><fa :icon="['fab', 'linkedin']" /></a> 
-      <a href="https://api.whatsapp.com/send?phone=5511957914246"><fa :icon="['fab', 'whatsapp']" /></a>
+      <a href="https://www.instagram.com/daniel.ba.photo/"><fa :icon="['fab', 'instagram']" /></a> 
+      <a href="https://api.whatsapp.com/send?phone=491604732199"><fa :icon="['fab', 'whatsapp']" /></a>
       <a href="mailto:gabrielaaalvescosta@gmail.com"><fa :icon="['fab', 'google']" /></a>
       </div>
 </template>
@@ -20,20 +20,20 @@ export default {
             font-size: 3.5em;
             letter-spacing: 0.40em;
             top: -20px;
-            color: #737373;
+            color: #ffcc33;
             position: relative;
         }
 
         .body__profile__icons a {
             font-size: inherit;
             padding: 0 0.15em;
-            color: #737373;
+            color: #ffcc33;
             transition: all 0.5s;
         }
 
         .body__profile__icons a:hover {
             font-size: inherit;
-            color: #ddd;
+            color: #ff9933;
         }
 
 </style>
