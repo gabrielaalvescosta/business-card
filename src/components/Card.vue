@@ -20,7 +20,6 @@ export default {
   },
   methods: {
     translateBio() {
-      console.log("muda bio")
     }
   }
 }

@@ -42,7 +42,7 @@ export default {
       return {
         trans: Boolean(true),
         german: Boolean,
-        curriculo: "https://github.com/gabrielaalvescosta/gabrielaalvescosta/raw/main/resumes/gabriela-costa-software-engineer-pt-br.pdf",
+        curriculo: "https://www.gallery.danielba.de",
         deFLag: "(DE)",
         enFlag: "(EN)",
         show: false,
