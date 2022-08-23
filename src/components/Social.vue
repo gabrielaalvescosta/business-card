@@ -17,23 +17,22 @@ export default {
             color: #999;
         }
         .body__profile__icons {
-            font-size: 3.5em;
+            font-size: 3em;
             letter-spacing: 0.40em;
             top: -20px;
-            color: #ffcc33;
+            color: #ff9933;
             position: relative;
         }
 
         .body__profile__icons a {
             font-size: inherit;
             padding: 0 0.15em;
-            color: #ffcc33;
+            color: #ff9933;
             transition: all 0.5s;
         }
 
         .body__profile__icons a:hover {
             font-size: inherit;
-            color: #ff9933;
+            color: #ffcc33;
         }
-
 </style>

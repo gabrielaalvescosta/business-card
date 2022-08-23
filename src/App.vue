@@ -27,7 +27,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #303030;
+  color: #161618;
   margin-top: 60px;
 }
 </style>

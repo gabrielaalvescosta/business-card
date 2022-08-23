@@ -5,7 +5,7 @@
           <h2>Photographer</h2>
           <h2>Adobe Certified</h2>
           <span class="linebreaker"></span>
-          <div class="body__profile__bio-en">{{ bioEn }}
+          <div class="body__profile__bio-de">{{ bioDe }}
           <span class="linebreaker"></span>
           </div>
           </div>
@@ -15,10 +15,10 @@
 <script>
 
 export default {
-    name: "English",
+    name: "German",
     data: () => ({
 
-      bioEn: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam`
+      bioDe: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam`
 
     }),
     
@@ -36,10 +36,6 @@ export default {
         font-weight: 900;
         text-align: center;
         color: rgb(171, 171, 171);
-        border: 2px solid #ff9933;
-        border-radius: 10px;
-        padding: 1em 0.5em;
-        box-shadow: rgba(124, 137, 139, 0.12) 0px 2px 4px 0px, rgba(124, 137, 139, 0.32) 0px 2px 16px 0px;
         text-transform: uppercase;
         margin: 0 0 0.5em 0;
       }
@@ -54,7 +50,7 @@ export default {
 
       }
 
-      .body__profile__bio-en {
+      .body__profile__bio-de {
         font-size: 0.75em;
         color: rgb(171, 171, 171);
         font-weight: 900;

@@ -1,13 +1,12 @@
 <template>
 <div id="demo">
-        <div v-if="portugues" class="body__profile__button-area" id="pt-br">
+        <div v-if="german" class="body__profile__button-area" id="de">
           <transition name="fade" v-on:enter="enter">
-                <Portuguese />
+                <German />
                  </transition>
                 <Social />
-                <button class="body__profile__button github"><a href="https://www.github.com/gabrielaalvescosta">Ver portfólio no GitHub</a></button>
-                <button class="body__profile__button cv"><a v-bind:href="curriculo">Baixar Currículo em PDF</a></button>
-         
+                <button class="cta-phone"><a href="tel:123-456-7890"><fa :icon="['fa', 'calendar']" /> Termin buchen</a></button>
+                <button class="body__profile__button github"><a href="https://www.gallery.danielba.de">Galerie besuchen</a></button>
         </div>
         
         <div v-else class="body__profile__button-area">
@@ -15,20 +14,19 @@
                 <English/>
                 </transition>
                 <Social />
-                <button class="body__profile__button github botao"><a href="https://www.github.com/gabrielaalvescosta">View portfolio on GitHub</a></button>
-                <button class="body__profile__button cv botao"><a v-bind:href="resume">Download Resume in PDF </a></button>
-               
+                <button class="cta-phone"><a href="tel:123-456-7890"><fa :icon="['fa', 'calendar']" /> Book a Date</a></button>
+                <button class="body__profile__button github botao"><a href="https://www.gallery.danielba.de">Visit Gallery</a></button>
         </div>
         <div class="body__profile__translate">
-                <button @click="translate" v-if="trans" v-on:click="fadeMe"><fa icon="flag" /> Translate {{ enFlag }}</button>
-                <button @click="translate" v-else v-on:click="fadeMe"><fa icon="flag" /> Traduzir (PT) </button>
+                <button @click="translate" v-if="trans" v-on:click="fadeMe"><fa icon="flag" /> Translate</button>
+                <button @click="translate" v-else v-on:click="fadeMe"><fa icon="flag" /> Übersetzen </button>
         </div>
         </div>
 </template>
 
 <script>
-import Portuguese from './Portuguese';
 import English from './English';
+import German from './German';
 import Social from './Social';
 
 export default {
@@ -36,24 +34,23 @@ export default {
     name: "Buttons",
     el: '#demo',
     components: {
-      Portuguese,
       English,
+      German,
       Social,
     },
     data() {
       return {
         trans: Boolean(true),
-        portugues: Boolean,
-        resume: "https://github.com/gabrielaalvescosta/gabrielaalvescosta/raw/main/resumes/gabriela-costa-software-engineer-en.pdf",
+        german: Boolean,
         curriculo: "https://github.com/gabrielaalvescosta/gabrielaalvescosta/raw/main/resumes/gabriela-costa-software-engineer-pt-br.pdf",
-        ptFLag: "(PT-BR)",
+        deFLag: "(DE)",
         enFlag: "(EN)",
         show: false,
       }
     },
     methods: {
       translate() {
-        this.portugues = !this.portugues;
+        this.german = !this.german;
         this.trans = !this.trans
         console.log("clicado aqui")
       
@@ -95,12 +92,12 @@ export default {
       position: relative;
     }
 
-    .body__profile button a {
+    /* .body__profile button a {
       text-decoration: none;
-      color: white;
-    }
+      color: #666;
+    } */
 
-    .body__profile button {
+    .body__profile__button {
       border: none;
       border-radius: 10px;
       font-family: Orkney;
@@ -110,17 +107,53 @@ export default {
       color: white;
       letter-spacing: 2px;
       font-weight: bold;
-      margin: 0.5em 0;
       cursor: pointer;
       transition: all 0.5s;
     }
 
+    .body__profile__button a {
+      text-decoration: none;
+    }
+
+    .cta-phone {
+      background: rgb(68, 68, 68);
+      border: #ff9933 solid 2px;
+      border-radius: 10px;
+      font-family: Orkney;
+      text-transform: uppercase;
+      padding: 1.5em 1em;
+      width: 100%;
+      color: white;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-bottom: 1em;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+
+    .cta-phone a {
+      text-decoration: none;
+      color: #ff9933;
+    }
+
+    .cta-phone:hover {
+      border-color: #ffcc33;
+      box-shadow: rgba(124, 137, 139, 0.12) 0px 2px 4px 0px, rgba(124, 137, 139, 0.32) 0px 2px 16px 0px;
+    }
+
+    .cta-phone a:hover {
+      color: #ffcc33;
+      transition: all 0.25s;
+    }
+
     .github {
-      background-color: #d1a1f5;
+      background-color: #ff9933;
+      color: #666;
     }
 
     .github:hover {
-       background-color: #df2fe6;
+       background-color: #ffcc33;
+       box-shadow: rgba(124, 137, 139, 0.12) 0px 2px 4px 0px, rgba(124, 137, 139, 0.32) 0px 2px 16px 0px;
     }
 
     .cv {
