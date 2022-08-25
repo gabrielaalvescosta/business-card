@@ -35,7 +35,7 @@ export default {
         font-size: 1.5em;
         font-weight: 900;
         text-align: center;
-        color: rgb(171, 171, 171);
+        color: #f4f1de;
         border: 2px solid #ff9933;
         border-radius: 10px;
         padding: 1em 0.5em;
@@ -46,7 +46,7 @@ export default {
 
       .body__profile__title h2 {
         font-size: 0.75em;
-        color: rgb(153, 153, 153);
+        color: #f4f1de;
         line-height: 1.391;
         font-weight: lighter;
         text-align: center;
@@ -56,7 +56,7 @@ export default {
 
       .body__profile__bio-en {
         font-size: 0.75em;
-        color: rgb(171, 171, 171);
+        color: #f4f1de;
         font-weight: 900;
         line-height: 1.404;
         text-align: center;

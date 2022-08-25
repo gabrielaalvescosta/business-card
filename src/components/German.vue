@@ -35,14 +35,14 @@ export default {
         font-size: 1.5em;
         font-weight: 900;
         text-align: center;
-        color: rgb(171, 171, 171);
+        color: #f4f1de;
         text-transform: uppercase;
         margin: 0 0 0.5em 0;
       }
 
       .body__profile__title h2 {
         font-size: 0.75em;
-        color: rgb(153, 153, 153);
+        color: #f4f1de;
         line-height: 1.391;
         font-weight: lighter;
         text-align: center;
