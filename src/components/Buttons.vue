@@ -5,7 +5,7 @@
                 <German />
                  </transition>
                 <Social />
-                <button class="cta-phone"><a href="tel:+491604732199"><fa :icon="['fa', 'calendar']" /> Termin buchen</a></button>
+                <button class="cta-phone"><a href="mailto:d.baptista@me.com"><fa :icon="['fas', 'envelope']" /> Mail an Mich</a></button>
                 <button class="body__profile__button github"><a href="https://www.gallery.danielba.de">Galerie besuchen</a></button>
         </div>
         
@@ -14,7 +14,7 @@
                 <English/>
                 </transition>
                 <Social />
-                <button class="cta-phone"><a href="tel:+491604732199"><fa :icon="['fa', 'calendar']" /> Book a Date</a></button>
+                <button class="cta-phone"><a href="mailto:d.baptista@me.com"><fa :icon="['fas', 'envelope']" /> Mail Me</a></button>
                 <button class="body__profile__button github botao"><a href="https://www.gallery.danielba.de">Visit Gallery</a></button>
         </div>
         <div class="body__profile__translate">

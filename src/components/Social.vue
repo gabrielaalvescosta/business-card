@@ -1,8 +1,8 @@
 <template>
       <div class="body__profile__icons">
-      <a href="https://www.instagram.com/daniel.ba.photo/"><fa :icon="['fab', 'instagram']" /></a> 
+      <a href="https://www.instagram.com/daniel.ba.photo/"><fa :icon="['fab', 'instagram']" /></a>
       <a href="https://api.whatsapp.com/send?phone=491604732199"><fa :icon="['fab', 'whatsapp']" /></a>
-      <a href="mailto:d.baptista@me.com"><fa :icon="['fab', 'google']" /></a>
+      <a href="tel:491604732199"><fa width="56px" class="svg__icon" :icon="['fas', 'phone-volume']" /></a>
       </div>
 </template>
 
@@ -17,24 +17,25 @@ export default {
             color: #999;
         }
         .body__profile__icons {
-            font-size: 3em;
+            font-size: 3.5em;
             letter-spacing: 0.40em;
             top: -20px;
             color: #ff9933;
             position: relative;
             margin-top: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0;
         }
 
         .body__profile__icons a {
             font-size: inherit;
             padding: 0 0.15em;
             color: #ff9933;
-            transition: all 0.5s;
+            transition: all 0.5s ease-in-out;
         }
 
         .body__profile__icons a:hover {
             font-size: inherit;
             color: #ffcc33;
+            transform: scale(1.5);
         }
 </style>
