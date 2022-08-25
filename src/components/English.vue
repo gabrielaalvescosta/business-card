@@ -1,12 +1,15 @@
 <template>
          
           <div class="body__profile__title">
-          <h1>Daniel Baptista</h1>
-          <h2>Photographer</h2>
-          <h2>Adobe Certified</h2>
+          <!-- <h1>Daniel Baptista</h1> -->
+          <img :src="require('../assets/db_logo_alt.png')" class="logo" alt="Daniel - logo" />  
+          <!-- <h2>Photographer</h2> -->
+          <!-- <h2>Adobe Certified</h2> -->
           <span class="linebreaker"></span>
-          <div class="body__profile__bio-en">{{ bioEn }}
-          <span class="linebreaker"></span>
+          <div>
+            <p class="body__profile__bio-en">{{ bioEn }}</p>
+            <a class="about__link" href="./About.vue">about me</a>
+            <span class="linebreaker"></span>
           </div>
           </div>
       
@@ -29,6 +32,13 @@ export default {
       .body__profile__title {
         top: -20px;
         position: relative;
+      }
+
+      .logo {
+        width: 250px;
+        margin-top: 1em;
+        object-fit: cover;
+        margin-bottom: 1.5em;
       }
 
       .body__profile__title h1 {
@@ -60,8 +70,10 @@ export default {
         font-weight: 900;
         line-height: 1.404;
         text-align: center;
-        margin: 1em 0;
+        margin-top: 0.5em;
         transition:all 0.5s ease-in-out;
+        margin-bottom: 0.5em;
+        padding: 0 0.5em;
       }
 
       .linebreaker {

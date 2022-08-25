@@ -1,12 +1,15 @@
 <template>
          
           <div class="body__profile__title">
-          <h1>Daniel Baptista</h1>
-          <h2>Photographer</h2>
-          <h2>Adobe Certified</h2>
+          <!-- <h1>Daniel Baptista</h1> -->
+          <img :src="require('../assets/db_logo_alt.png')" class="logo" alt="Daniel - the author" />  
+          <!-- <h2>Photographer</h2> -->
+          <!-- <h2>Adobe Certified</h2> -->
           <span class="linebreaker"></span>
-          <div class="body__profile__bio-de">{{ bioDe }}
-          <span class="linebreaker"></span>
+          <div>
+            <p class="body__profile__bio-de">{{ bioDe }}</p>
+            <a class="about__link" href="./About.vue">about me</a>
+            <span class="linebreaker"></span>
           </div>
           </div>
       
@@ -52,12 +55,14 @@ export default {
 
       .body__profile__bio-de {
         font-size: 0.75em;
-        color: rgb(171, 171, 171);
+        color: #f4f1de;
         font-weight: 900;
         line-height: 1.404;
         text-align: center;
-        margin: 1em 0;
+        margin-top: 0.5em;
         transition:all 0.5s ease-in-out;
+        margin-bottom: 0.5em;
+        padding: 0 0.5em;
       }
 
       .linebreaker {
@@ -66,6 +71,16 @@ export default {
         height: 2px;
         background-color: #ff9933;
         box-shadow: rgba(124, 137, 139, 0.12) 0px 2px 4px 0px, rgba(124, 137, 139, 0.32) 0px 2px 16px 0px;
+        margin-bottom: 0.5em 0;
+      }
+
+      .about__link {
+        text-transform: uppercase;
+        font-size: 0.75em;
+        color: #ffcc33;
+        letter-spacing: 0.25em;
+        margin-top: 0.25em;
+        font-weight: bold;
       }
 </style>
 

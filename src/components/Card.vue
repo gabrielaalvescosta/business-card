@@ -11,6 +11,7 @@
 
 import Photo from './Photo';
 import Buttons from './Buttons';
+/** import About from './About.vue' */
 
 export default {
   name: 'Card',

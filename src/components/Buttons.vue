@@ -113,6 +113,13 @@ export default {
 
     .body__profile__button a {
       text-decoration: none;
+      color: #f4f1de;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .body__profile__button a:hover {
+      color: #999;
+      transition: all 0.5s ease-in-out;
     }
 
     .cta-phone {
@@ -134,6 +141,7 @@ export default {
     .cta-phone a {
       text-decoration: none;
       color: #ff9933;
+      transition: all 0.5s ease-in-out;
     }
 
     .cta-phone:hover {
@@ -144,11 +152,12 @@ export default {
     .cta-phone a:hover {
       color: #ffcc33;
       transition: all 0.25s;
+      
     }
 
     .github {
       background-color: #ff9933;
-      color: #666;
+      color: #f4f1de;
     }
 
     .github:hover {
@@ -176,6 +185,11 @@ export default {
       cursor: pointer;
       position: relative;
       transition: all 0.5s;
+    }
+
+    .body__profile__translate button:hover {
+      color: #f4f1de;
+      transition: all 0.5s ease-in-out;
     }
     
 
