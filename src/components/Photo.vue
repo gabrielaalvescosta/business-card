@@ -1,6 +1,6 @@
 <template>
     <div class="body__profile__photo">
-    <img src="../assets/perfil.jpg" alt="Perfil" />   
+    <img src="../assets/Fotor_AI.jpg" alt="Perfil" />   
     </div>
 </template>
 
